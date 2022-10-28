@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/*
+    note font
+    font-family: 'Poppins', sans-serif;
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --maincolor: #114563;
+    --menucolor: #1e79ae;
+    --colorstyle: #ffc34d; 
+    --backgroundwhite: #ffffff;
+    --backgroundgray: #f2f2f2 ;
+    --backgroundfooter: #333333 ;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 
+=====================================================
+    TALENT & FREELANCERS
+=====================================================
+ */
+.talent {
+    background-color: var(--backgroundwhite);
+    padding: 50px 0;
+}
+.talent-container {
+    max-width: 80rem;
+    margin: auto;
+}
+.talent-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.talent-col {
+    width: 50%;
+    padding: 0 20px;
+}
+.talent-col h3 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 40px;
+    font-weight: 600;
+    color: var(--maincolor);
+}
+.talent-col p {
+    font-weight: 400;
+    font-size: 20px;
+    margin: 50px 0;
+}
+.talent-col a {
+    border: 1px solid var(--menucolor);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--maincolor);
+    color: var(--backgroundwhite);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: 0.3s ;
+}
+.talent-col a:hover {
+    background-color: var(--backgroundgray);
+    color: var(--maincolor);
+}
+.talent-col img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 960px) {
+    /* 
+    =====================================================
+        TALENT & FREELANCERS
+    =====================================================
+    */
+    .talent-col h3 {
+        font-size: 20px;
+        margin: 10px 0;
+    }
+    .talent-col p{
+        font-size: 18px;
+        margin: 20px 0;
+    }
+}
+
+@media screen and (max-width: 420px){
+    /* 
+    =====================================================
+        TALENT & FREELANCERS
+    =====================================================
+    */
+    .talent-col {
+        width: 100%;
+        margin: 10px 0;
+    }
+}

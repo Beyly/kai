@@ -1,0 +1,475 @@
+/*
+    use for all page 
+    include 
+    Header file (logo menu)
+    botton search
+    photo slide 
+    footer
+ */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/*
+    note font
+    font-family: 'Poppins', sans-serif;
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --maincolor: #114563;
+    --menucolor: #1e79ae;
+    --colorstyle: #ffc34d; 
+    --backgroundwhite: #ffffff;
+    --backgroundfooter: #333333 ;
+}
+
+body {
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    height: auto;
+}
+
+/* ===========================================
+header include LOGO and Nav Menu Phone-menu 
+================================================*/
+.header {
+    width: 100%;
+    padding: 0;
+    box-shadow: -1px 10px 12px -1px rgba(97,97,97,0.53);
+    position: relative;
+}
+    /* logo  */
+.logo img {
+    width: 90px;
+}
+    /* navbar */
+.navbar {
+    width: 88%;
+    margin: auto;
+}
+.nav ul {
+    list-style-type: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 0;
+}
+.nav li {
+    float: right;
+}
+.nav a {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--menucolor);
+    position: relative;
+}
+.nav a::before {
+    content: "";
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s transform ease;
+    transform: scale3d(0,0,1);
+    transform-origin: 0 50%;
+}
+.nav a:hover::before {
+    transform: scale3d(1,1,1);
+}
+.nav a::before {
+    background-color: var(--colorstyle);
+    transform-origin: 100% 50%;
+}
+    /* navbar in mobile mode */
+.mobile-navbar-btn {
+    display: none;
+    background: transparent;
+    cursor: pointer;
+}
+.mobile-nav-icon {
+    font-size: 28px;
+    color: var(--menucolor);
+}
+.mobile-nav-icon[name="close-outline"] {
+    display: none;
+}
+
+/* ===========================================
+    search box
+================================================*/
+.search-box {
+    width: 40rem;
+    height: 40px;
+    border: 3px solid var(--menucolor);
+    background-color: none;
+    border-radius: 30px;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.search {
+    border: none;
+    background: none;
+    color: var(--menucolor);
+    font-size: 18px;
+}
+.search:focus {
+    outline: none;
+}
+.btn-search {
+    width: 40px;
+    height: 45px;
+    border-radius:0 50% 50% 0;
+    margin-right: -22px;
+    background: var(--menucolor);
+    border: 5px solid var(--menucolor);
+    color:var(--backgroundwhite);
+    font-size: 20px;
+}
+
+/* ===========================================
+    Image slider with bootstrap 5.2v
+================================================*/
+
+.carousel{
+    margin-top: 30px;
+}
+
+
+/* ===========================================
+    Footer
+================================================*/
+.footer {
+    background-color: var(--backgroundfooter);
+    padding: 50px 0;
+    bottom: 0;
+}
+.footer-container {
+    max-width: 80rem;
+    margin: auto;
+}
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-col {
+    width: 25%;
+    padding: 0 10px;
+}
+.footer-col h4 {
+    font-size: 18px;
+    color: var(--backgroundwhite);
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative; 
+}
+.footer-col h4::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: var(--backgroundwhite);
+    height: 2px;
+    box-sizing: border-box;
+    width: 80%;
+}
+.footer-col ul {
+    list-style: none;
+}
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+.footer-col ul li a {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: var(--backgroundwhite);
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+}
+.footer-col ul li a:hover {
+    color: var(--backgroundwhite);
+    padding-left: 10px ;
+}
+.footer-col .social-link a{
+   display: inline-block;
+   height: 40px;
+   width: 40px;
+   background-color: rgba(255,255,255,0.2);
+   margin: 0 10px 0 10px;
+   line-height: 40px;
+   text-align: center;
+   border-radius: 50%;
+   color: var(--backgroundwhite);
+   transition: all 0.5s ease;
+   
+}
+.footer-col .social-link a:hover {
+    color: #737373;
+    background-color: var(--backgroundwhite);
+    transform: translateY(-8px);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 960px){
+    .navbar {
+        width: 100%;
+    }
+    .header {
+        position: relative;
+    }
+    .logo img {
+        width: 120px;
+    }
+    .mobile-navbar-btn {
+        display: block;
+        z-index: 1000;
+        border: 3px solid  var(--menucolor);
+        color: var(--menucolor);
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    .nav {
+        /* display: none;  */
+        width: 100%;
+        height: 100vh;
+        background-color: var(--backgroundwhite);
+        position: absolute;
+        top: 0; 
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transform: translateY(0%);
+        transition: all 0.3s linear;
+        opacity: 0; 
+        visibility: hidden;
+        pointer-events: none;
+    }
+    .nav a {
+        font-size: 26px;
+        padding: 30px; 
+        text-align: center;
+    }
+    .nav a:hover::before {
+        transform: scale3d(0,0,0);
+    }
+    .nav li {
+        display: flex;
+        flex-direction: column;
+    }
+    .active .nav {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    
+    .active .mobile-navbar-btn .mobile-nav-icon [name="close-outline"]{
+        display: block;
+    }
+
+    /* ===========================================
+    search box
+    ================================================*/
+    .search-box {
+        width: 20rem;
+        height: 40px;
+        border: 3px solid var(--menucolor);
+        background-color: none;
+        border-radius: 30px;
+        margin: 0 auto;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+        }
+    .search {
+        border: none;
+        background: none;
+        color: var(--menucolor);
+        font-size: 18px;
+    }
+    .search:focus {
+        outline: none;
+    }
+    .btn-search {
+        width: 40px;
+        height: 40px;
+        border-radius:0 50% 50% 0;
+        margin-right: -22px;
+        background: var(--menucolor);
+        border: 4px solid var(--menucolor);
+        color:var(--backgroundwhite);
+        font-size: 20px;
+    }
+
+    .carousel{
+        display: none;
+    }
+
+    /* ===========================================
+    Footer
+    ================================================*/
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+@media screen and (max-width: 420px){
+    .navbar {
+        width: 100%;
+        height: auto;
+    }
+    .header {
+        position: relative;
+    }
+    .logo img {
+        width: 90px;
+    }
+    .mobile-navbar-btn {
+        display: block;
+        z-index: 1000;
+        border: 3px solid  var(--menucolor);
+        color: var(--menucolor);
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    .nav {
+        /* display: none;  */
+        width: 100%;
+        height: 100vh;
+        background-color: var(--backgroundwhite);
+        position: absolute;
+        top: 0; 
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transform: translateY(0%);
+        transition: all 0.3s linear;
+        opacity: 0; 
+        visibility: hidden;
+        pointer-events: none;
+    }
+    .nav a {
+        font-size: 18px;
+        padding: 20px; 
+        text-align: center;
+    }
+    .nav a:hover::before {
+        transform: scale3d(0,0,0);
+    }
+    .nav li {
+        display: flex;
+        flex-direction: column;
+    }
+    .active .nav {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    
+    .active .mobile-navbar-btn .mobile-nav-icon [name="close-outline"]{
+        display: block;
+    }
+    
+
+    /* ===========================================
+    search box
+    ================================================*/
+    .search-box {
+        width: 20rem;
+        height: 40px;
+        border: 3px solid var(--menucolor);
+        background-color: none;
+        border-radius: 30px;
+        margin: 0 auto;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    .search {
+        border: none;
+        background: none;
+        color: var(--menucolor);
+        font-size: 18px;
+    }
+    .search:focus {
+        outline: none;
+    }
+    .btn-search {
+        width: 40px;
+        height: 40px;
+        border-radius:0 50% 50% 0;
+        margin-right: -22px;
+        background: var(--menucolor);
+        border: 4px solid var(--menucolor);
+        color:var(--backgroundwhite);
+        font-size: 20px;
+    }
+    
+
+    .carousel{
+        display: none;
+    }
+
+    /* ===========================================
+    Footer
+    ================================================*/
+    .footer-col {
+        width: 100%;
+    }
+}
